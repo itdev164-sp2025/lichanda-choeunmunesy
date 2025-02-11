@@ -120,12 +120,17 @@ const BlogPost = ({
   data
 }) => {
   const {
-    title
+    title,
+    body
   } = data.contentfulBlogPost;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, title));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: body.childMarkdownRemark.html
+    }
+  }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlogPost);
-const pageQuery = "3512118559";
+const pageQuery = "2074595055";
 
 /***/ }),
 
