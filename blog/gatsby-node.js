@@ -1,5 +1,6 @@
 const path = require('path');
 
+
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
@@ -11,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 allContentfulBlogPost {
                     edges {
                         node {
-                            slug
+                        slug
                         }
                     }
                 }
@@ -21,18 +22,21 @@ exports.createPages = async ({ graphql, actions }) => {
                 reject(result.errors);
             }
 
+
             result.data.allContentfulBlogPost.edges.forEach((edge) => {
-                console.log('Creating page for:', edge.node.slug); 
                 createPage({
                     path: edge.node.slug,
                     component: require.resolve('./src/templates/blog-post.js'),
                     context: {
-                        slug: edge.node.slug,
+                        slug: edge.node.slug
                     },
-                });
-            });
+                })
+            })
 
-            resolve();
-        });
-    });
-};
+
+            resolve()
+        })
+    })
+}
+
+
