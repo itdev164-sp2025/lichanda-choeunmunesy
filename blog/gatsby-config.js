@@ -12,7 +12,7 @@ path: `.env.${process.env.NODE_ENV}`
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Blog`,
+    title: `Lanna's Blog`,
     description: ``,
     author: `lichanda choeunmunesy`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
