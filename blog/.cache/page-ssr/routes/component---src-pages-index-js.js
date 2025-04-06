@@ -993,6 +993,44 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/Footer/Footer.js":
+/*!*****************************************!*\
+  !*** ./src/components/Footer/Footer.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Footer: () => (/* binding */ Footer)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BaseContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../BaseContainer */ "./src/components/BaseContainer/index.js");
+
+
+const Footer = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BaseContainer__WEBPACK_IMPORTED_MODULE_1__.BaseContainer, Object.assign({
+  as: "footer"
+}, props));
+
+/***/ }),
+
+/***/ "./src/components/Footer/index.js":
+/*!****************************************!*\
+  !*** ./src/components/Footer/index.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Footer: () => (/* reexport safe */ _Footer__WEBPACK_IMPORTED_MODULE_0__.Footer)
+/* harmony export */ });
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer */ "./src/components/Footer/Footer.js");
+
+
+/***/ }),
+
 /***/ "./src/components/Header/Header.js":
 /*!*****************************************!*\
   !*** ./src/components/Header/Header.js ***!
@@ -1006,30 +1044,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var _Heading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Heading */ "./src/components/Heading/index.js");
+/* harmony import */ var _Section__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Section */ "./src/components/Section/index.js");
 
 
 
 
-const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].header`
+
+
+const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].header`
   background: #f8f8f8;
   padding: 10px 20px;
 `;
-const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])((0,gatsby__WEBPACK_IMPORTED_MODULE_1__.Link))`
+const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_4__["default"])((0,gatsby__WEBPACK_IMPORTED_MODULE_1__.Link))`
   text-decoration: none;
   color: #333;
   font-size: 1.5rem;
 `;
 const Header = ({
   siteTitle
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLink, {
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Section__WEBPACK_IMPORTED_MODULE_3__.Section, {
+  width: 11 / 12
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLink, {
   to: "/"
-}, siteTitle));
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Heading__WEBPACK_IMPORTED_MODULE_2__.H1, null, siteTitle))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Section__WEBPACK_IMPORTED_MODULE_3__.Section, {
+  width: 1 / 12
+}, "Search"));
 Header.propTypes = {
-  siteTitle: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)
+  siteTitle: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string)
 };
 Header.defaultProps = {
   siteTitle: ''
@@ -1050,6 +1096,76 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Header: () => (/* reexport safe */ _Header__WEBPACK_IMPORTED_MODULE_0__.Header)
 /* harmony export */ });
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Header */ "./src/components/Header/Header.js");
+
+
+/***/ }),
+
+/***/ "./src/components/Heading/BaseHeading.js":
+/*!***********************************************!*\
+  !*** ./src/components/Heading/BaseHeading.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BaseHeading: () => (/* binding */ BaseHeading)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rebass */ "./node_modules/rebass/dist/index.js");
+
+
+
+const BaseHeading = ({
+  children,
+  ...rest
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(rebass__WEBPACK_IMPORTED_MODULE_1__.Heading, rest, children);
+BaseHeading.propTypes = {
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().node).isRequired
+};
+
+
+/***/ }),
+
+/***/ "./src/components/Heading/Heading1.js":
+/*!********************************************!*\
+  !*** ./src/components/Heading/Heading1.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   H1: () => (/* binding */ Heading1)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BaseHeading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BaseHeading */ "./src/components/Heading/BaseHeading.js");
+
+
+const Heading1 = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BaseHeading__WEBPACK_IMPORTED_MODULE_1__.BaseHeading, Object.assign({
+  as: "h1",
+  "font-size": [3, 4, 5]
+}, props));
+
+
+/***/ }),
+
+/***/ "./src/components/Heading/index.js":
+/*!*****************************************!*\
+  !*** ./src/components/Heading/index.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   H1: () => (/* reexport safe */ _Heading1__WEBPACK_IMPORTED_MODULE_0__.H1)
+/* harmony export */ });
+/* harmony import */ var _Heading1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Heading1 */ "./src/components/Heading/Heading1.js");
 
 
 /***/ }),
@@ -1138,6 +1254,82 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/Main/Main.js":
+/*!*************************************!*\
+  !*** ./src/components/Main/Main.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Main: () => (/* binding */ Main)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BaseContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../BaseContainer */ "./src/components/BaseContainer/index.js");
+
+
+const Main = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BaseContainer__WEBPACK_IMPORTED_MODULE_1__.BaseContainer, Object.assign({
+  as: "main"
+}, props));
+
+/***/ }),
+
+/***/ "./src/components/Main/index.js":
+/*!**************************************!*\
+  !*** ./src/components/Main/index.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Main: () => (/* reexport safe */ _Main__WEBPACK_IMPORTED_MODULE_0__.Main)
+/* harmony export */ });
+/* harmony import */ var _Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Main */ "./src/components/Main/Main.js");
+
+
+/***/ }),
+
+/***/ "./src/components/Section/Section.js":
+/*!*******************************************!*\
+  !*** ./src/components/Section/Section.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Section: () => (/* binding */ Section)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BaseContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../BaseContainer */ "./src/components/BaseContainer/index.js");
+
+
+const Section = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BaseContainer__WEBPACK_IMPORTED_MODULE_1__.BaseContainer, Object.assign({
+  as: "section"
+}, props));
+
+/***/ }),
+
+/***/ "./src/components/Section/index.js":
+/*!*****************************************!*\
+  !*** ./src/components/Section/index.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Section: () => (/* reexport safe */ _Section__WEBPACK_IMPORTED_MODULE_0__.Section)
+/* harmony export */ });
+/* harmony import */ var _Section__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Section */ "./src/components/Section/Section.js");
+
+
+/***/ }),
+
 /***/ "./src/components/layout.js":
 /*!**********************************!*\
   !*** ./src/components/layout.js ***!
@@ -1155,13 +1347,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./src/components/Header/index.js");
 /* harmony import */ var _layout_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout.css */ "./src/components/layout.css");
 /* harmony import */ var _layout_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_layout_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Main */ "./src/components/Main/index.js");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Footer */ "./src/components/Footer/index.js");
 
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+
 
 
 
@@ -1179,7 +1368,7 @@ const Layout = ({
       maxWidth: `var(--size-content)`,
       padding: `var(--size-gutter)`
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("main", null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("footer", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Main__WEBPACK_IMPORTED_MODULE_4__.Main, null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Footer__WEBPACK_IMPORTED_MODULE_5__.Footer, {
     style: {
       marginTop: `var(--space-5)`,
       fontSize: `var(--font-sm)`
