@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { heading } from 'rebass'
+import { Heading } from 'rebass'
 
 const BaseHeading = ({ children, ...rest}) =>
     <Heading {...rest}>
