@@ -1105,13 +1105,134 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/Button/BaseButton.js":
+/*!*********************************************!*\
+  !*** ./src/components/Button/BaseButton.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BaseButton: () => (/* binding */ BaseButton)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rebass */ "./node_modules/rebass/dist/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+
+
+
+
+const Reset = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])((0,rebass__WEBPACK_IMPORTED_MODULE_2__.Button))`
+background: none;
+box-shadow: none;
+font-weight: normal;
+border-radius: 0;
+cursor:pointer;
+`;
+const BaseButton = ({
+  children,
+  ...rest
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Reset, rest, children);
+BaseButton.propTypes = {
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().node).isRequired
+};
+
+/***/ }),
+
+/***/ "./src/components/Button/IconButton.js":
+/*!*********************************************!*\
+  !*** ./src/components/Button/IconButton.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   IconButton: () => (/* binding */ IconButton)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _BaseButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BaseButton */ "./src/components/Button/BaseButton.js");
+
+
+
+
+const StyledButton = (0,styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])((0,_BaseButton__WEBPACK_IMPORTED_MODULE_1__.BaseButton))`
+${({
+  theme,
+  variant
+}) => theme.variants.iconButton[variant || 'primary']}
+`;
+const IconButton = (0,styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(({
+  icon,
+  ...rest
+}) => {
+  let clone = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(icon, rest);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledButton, Object.assign({}, rest, {
+    className: rest.className
+  }), clone);
+})`
+
+
+`;
+IconButton.defaultProps = {
+  size: 24
+};
+IconButton.propTypes = {
+  icon: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().node).isRequired
+};
+
+/***/ }),
+
 /***/ "./src/components/Button/index.js":
 /*!****************************************!*\
   !*** ./src/components/Button/index.js ***!
   \****************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   IconButton: () => (/* reexport safe */ _IconButton__WEBPACK_IMPORTED_MODULE_0__.IconButton)
+/* harmony export */ });
+/* harmony import */ var _IconButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IconButton */ "./src/components/Button/IconButton.js");
 
 
+/***/ }),
+
+/***/ "./src/components/Content.js":
+/*!***********************************!*\
+  !*** ./src/components/Content.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Content: () => (/* binding */ Content)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+
+
+const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  margin: 0 auto;
+  max-width: var(--size-content);
+  padding: var(--size-gutter);
+`;
+const Content = ({
+  children
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, children);
+};
 
 /***/ }),
 
@@ -1173,7 +1294,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Heading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Heading */ "./src/components/Heading/index.js");
 /* harmony import */ var _Section__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Section */ "./src/components/Section/index.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./src/components/Button/index.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Button__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var styled_icons_feather__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-icons/feather */ "./node_modules/@styled-icons/feather/Search/Search.esm.js");
 
 
@@ -1404,6 +1524,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_layout_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Main */ "./src/components/Main/index.js");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Footer */ "./src/components/Footer/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _themes_Gray__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./themes/Gray */ "./src/components/themes/Gray/index.js");
+/* harmony import */ var _Content__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Content */ "./src/components/Content.js");
+
+
+
 
 
 
@@ -1415,9 +1541,11 @@ const Layout = ({
 }) => {
   var _data$site$siteMetada;
   const data = _public_page_data_sq_d_3649515864_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__.Header, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(styled_components__WEBPACK_IMPORTED_MODULE_8__.ThemeProvider, {
+    theme: _themes_Gray__WEBPACK_IMPORTED_MODULE_6__.Gray
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__.Header, {
     siteTitle: ((_data$site$siteMetada = data.site.siteMetadata) === null || _data$site$siteMetada === void 0 ? void 0 : _data$site$siteMetada.title) || `Title`
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Content__WEBPACK_IMPORTED_MODULE_7__.Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     style: {
       margin: `0 auto`,
       maxWidth: `var(--size-content)`,
@@ -1428,9 +1556,9 @@ const Layout = ({
       marginTop: `var(--space-5)`,
       fontSize: `var(--font-sm)`
     }
-  }, "\xA9 ", new Date().getFullYear(), " \xB7 Built with", ` `, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", {
+  }, "\xA9 ", new Date().getFullYear(), " \xB7 Built with", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", {
     href: "https://www.gatsbyjs.com"
-  }, "Gatsby"))));
+  }, "Gatsby")))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
 
@@ -1497,6 +1625,62 @@ function Seo({
   }), children);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Seo);
+
+/***/ }),
+
+/***/ "./src/components/themes/Gray/Gray.js":
+/*!********************************************!*\
+  !*** ./src/components/themes/Gray/Gray.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Gray: () => (/* binding */ Gray)
+/* harmony export */ });
+const theme = {
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  colors: {
+    grays: ['hsl(208, 13%, 100%)', 'hsl(208, 13%, 90%)', 'hsl(208, 13%, 80%)', 'hsl(208, 13%, 75%)', 'hsl(208, 13%, 65%)', 'hsl(208, 13%, 55%)', 'hsl(208, 13%, 45%)', 'hsl(208, 13%, 35%)', 'hsl(208, 13%, 25%)', 'hsl(208, 13%, 15%)', 'hsl(208, 13%, 5%)']
+  }
+};
+const variants = {
+  iconButton: {
+    primary: {
+      color: theme.colors.grays[8]
+    },
+    contrast: {
+      color: theme.colors.grays[0]
+    }
+  },
+  header: {
+    primary: {
+      backgroundColor: theme.colors.grays[8],
+      color: theme.colors.grays[0]
+    }
+  }
+};
+const Gray = {
+  ...theme,
+  variants
+};
+
+/***/ }),
+
+/***/ "./src/components/themes/Gray/index.js":
+/*!*********************************************!*\
+  !*** ./src/components/themes/Gray/index.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Gray: () => (/* reexport safe */ _Gray__WEBPACK_IMPORTED_MODULE_0__.Gray)
+/* harmony export */ });
+/* harmony import */ var _Gray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Gray */ "./src/components/themes/Gray/Gray.js");
+
 
 /***/ }),
 
