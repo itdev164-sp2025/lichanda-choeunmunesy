@@ -372,6 +372,36 @@ IconButton.propTypes = {
 
 /***/ }),
 
+/***/ "./src/components/Button/SearchButton.js":
+/*!***********************************************!*\
+  !*** ./src/components/Button/SearchButton.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SearchButton: () => (/* binding */ SearchButton)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _IconButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IconButton */ "./src/components/Button/IconButton.js");
+
+
+
+
+const SearchButton = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(styled_components__WEBPACK_IMPORTED_MODULE_2__.ThemeConsumer, null, theme => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_IconButton__WEBPACK_IMPORTED_MODULE_1__.IconButton, Object.assign({
+  icon: theme.icons.Search
+}, props)));
+SearchButton.propTypes = {
+  variant: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)
+};
+
+/***/ }),
+
 /***/ "./src/components/Button/index.js":
 /*!****************************************!*\
   !*** ./src/components/Button/index.js ***!
@@ -381,9 +411,12 @@ IconButton.propTypes = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconButton: () => (/* reexport safe */ _IconButton__WEBPACK_IMPORTED_MODULE_0__.IconButton)
+/* harmony export */   IconButton: () => (/* reexport safe */ _IconButton__WEBPACK_IMPORTED_MODULE_0__.IconButton),
+/* harmony export */   SearchButton: () => (/* reexport safe */ _SearchButton__WEBPACK_IMPORTED_MODULE_1__.SearchButton)
 /* harmony export */ });
 /* harmony import */ var _IconButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IconButton */ "./src/components/Button/IconButton.js");
+/* harmony import */ var _SearchButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchButton */ "./src/components/Button/SearchButton.js");
+
 
 
 /***/ }),
@@ -471,11 +504,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rebass */ "./node_modules/rebass/dist/index.js");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _Heading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Heading */ "./src/components/Heading/index.js");
 /* harmony import */ var _Section__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Section */ "./src/components/Section/index.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./src/components/Button/index.js");
-/* harmony import */ var styled_icons_feather__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-icons/feather */ "./node_modules/@styled-icons/feather/Search/Search.esm.js");
 
 
 
@@ -490,30 +523,58 @@ const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].h
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
   background: ${({
   theme
 }) => theme.variants.header.primary.backgroundColor};
 `;
 const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])((0,gatsby__WEBPACK_IMPORTED_MODULE_1__.Link))`
-  font-size: var(--font-sm);
+  margin : 0 10px;
   text-decoration: none;
   color: ${({
   theme
 }) => theme.variants.header.primary.color};
 `;
+const Image = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].img`
+margin: 0;
+`;
+const Nav = (0,styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])((0,rebass__WEBPACK_IMPORTED_MODULE_6__.Flex))`
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+`;
+const Title = (0,styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])((0,_Heading__WEBPACK_IMPORTED_MODULE_2__.H1))`
+flex: 4;
+`;
+const MediaQuery = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div`
+@media (max-width: 600px) {
+  display: none;
+}
+`;
 const Header = ({
   siteTitle
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Section__WEBPACK_IMPORTED_MODULE_3__.Section, {
-  width: 11 / 12
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLink, {
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Section__WEBPACK_IMPORTED_MODULE_3__.Section, {
+  flex: true
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Section__WEBPACK_IMPORTED_MODULE_3__.Section, {
+  width: 1 / 12,
+  flexDirection: "column",
+  justifyContent: "center"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(styled_components__WEBPACK_IMPORTED_MODULE_5__.ThemeConsumer, null, theme => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Image, {
+  src: theme.images.mainHeaderImage
+}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Section__WEBPACK_IMPORTED_MODULE_3__.Section, {
+  width: 11 / 12,
+  flexDirection: "column",
+  justifyContent: "center"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Title, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLink, {
   to: "/"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Heading__WEBPACK_IMPORTED_MODULE_2__.H1, null, siteTitle))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Section__WEBPACK_IMPORTED_MODULE_3__.Section, {
-  width: 1 / 12
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Button__WEBPACK_IMPORTED_MODULE_4__.IconButton, {
-  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(styled_icons_feather__WEBPACK_IMPORTED_MODULE_6__.Search, null),
+}, siteTitle)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MediaQuery, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLink, {
+  to: "/"
+}, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLink, {
+  to: "/about"
+}, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLink, {
+  to: "/contact"
+}, "Contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button__WEBPACK_IMPORTED_MODULE_4__.SearchButton, {
   variant: "contrast"
-})));
+})))));
 Header.propTypes = {
   siteTitle: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().string)
 };
@@ -732,7 +793,9 @@ const Layout = ({
       maxWidth: `var(--size-content)`,
       padding: `var(--size-gutter)`
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Main__WEBPACK_IMPORTED_MODULE_4__.Main, null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Footer__WEBPACK_IMPORTED_MODULE_5__.Footer, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Main__WEBPACK_IMPORTED_MODULE_4__.Main, {
+    m: 20
+  }, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Footer__WEBPACK_IMPORTED_MODULE_5__.Footer, {
     style: {
       marginTop: `var(--space-5)`,
       fontSize: `var(--font-sm)`
@@ -820,11 +883,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Gray: () => (/* binding */ Gray)
 /* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _images_react_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/react.png */ "./src/components/themes/Gray/images/react.png");
+/* harmony import */ var styled_icons_feather__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-icons/feather */ "./node_modules/@styled-icons/feather/Search/Search.esm.js");
+
+
+
 const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors: {
     grays: ['hsl(208, 13%, 100%)', 'hsl(208, 13%, 90%)', 'hsl(208, 13%, 80%)', 'hsl(208, 13%, 75%)', 'hsl(208, 13%, 65%)', 'hsl(208, 13%, 55%)', 'hsl(208, 13%, 45%)', 'hsl(208, 13%, 35%)', 'hsl(208, 13%, 25%)', 'hsl(208, 13%, 15%)', 'hsl(208, 13%, 5%)']
   }
+};
+const images = {
+  mainHeaderImage: _images_react_png__WEBPACK_IMPORTED_MODULE_1__["default"]
+};
+const icons = {
+  Search: /*#__PURE__*/React.createElement(styled_icons_feather__WEBPACK_IMPORTED_MODULE_2__.Search, null)
 };
 const variants = {
   iconButton: {
@@ -844,7 +920,9 @@ const variants = {
 };
 const Gray = {
   ...theme,
-  variants
+  variants,
+  images,
+  icons
 };
 
 /***/ }),
@@ -3915,6 +3993,21 @@ module.exports.toUnicode = function(domain_name, useSTD3) {
 
 module.exports.PROCESSING_OPTIONS = PROCESSING_OPTIONS;
 
+
+/***/ }),
+
+/***/ "./src/components/themes/Gray/images/react.png":
+/*!*****************************************************!*\
+  !*** ./src/components/themes/Gray/images/react.png ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/react-3681f1b8669e5cda8d90a6982e0255b7.png");
 
 /***/ }),
 
